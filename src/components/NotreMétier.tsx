@@ -5,8 +5,8 @@ const NotreMétier = () => {
         <h2 className="section-title text-foreground">Notre métier</h2>
         <div className="section-title-underline" />
 
-        <div className="mt-16 space-y-12">
-          <div className="text-center">
+        <div className="mt-16 space-y-16">
+          <div className="text-center max-w-2xl mx-auto">
             <h3 className="section-subtitle text-foreground mb-6">
               conseiller et guider
             </h3>
@@ -18,7 +18,7 @@ const NotreMétier = () => {
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center max-w-2xl mx-auto">
             <h3 className="section-subtitle text-foreground mb-6">
               analyser et recommander
             </h3>
@@ -33,7 +33,7 @@ const NotreMétier = () => {
             </p>
           </div>
 
-          <div className="text-center">
+          <div className="text-center max-w-2xl mx-auto">
             <h3 className="section-subtitle text-foreground mb-6">
               être au service de nos clients
             </h3>
