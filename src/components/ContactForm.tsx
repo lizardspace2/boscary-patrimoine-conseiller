@@ -15,16 +15,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
 const formSchema = z.object({
-    name: z.min(2, {
+    name: z.string().min(2, {
         message: "Le nom doit contenir au moins 2 caractères.",
     }),
-    email: z.email({
+    email: z.string().email({
         message: "Veuillez entrer une adresse email valide.",
     }),
-    subject: z.min(5, {
+    subject: z.string().min(5, {
         message: "Le sujet doit contenir au moins 5 caractères.",
     }),
-    message: z.min(10, {
+    message: z.string().min(10, {
         message: "Le message doit contenir au moins 10 caractères.",
     }),
 });
