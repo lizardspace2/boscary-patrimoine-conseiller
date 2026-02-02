@@ -8,6 +8,8 @@ import LeCabinet from "./pages/LeCabinet";
 import NousContacter from "./pages/NousContacter";
 import NotFound from "./pages/NotFound";
 
+import AdminMessages from "./pages/AdminMessages";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -20,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/le-cabinet" element={<LeCabinet />} />
           <Route path="/nous-contacter" element={<NousContacter />} />
+          <Route path="/admin/messages" element={<AdminMessages />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

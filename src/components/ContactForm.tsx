@@ -14,6 +14,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 
+import { supabase } from "@/lib/supabaseClient";
+
 const formSchema = z.object({
     name: z.string().min(2, {
         message: "Le nom doit contenir au moins 2 caractères.",
@@ -40,12 +42,35 @@ export function ContactForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
-        toast.success("Message envoyé !", {
-            description: "Nous vous recontacterons dans les plus brefs délais.",
-        });
-        form.reset();
+        try {
+            const { error } = await supabase
+                .from('contact_messages')
+                .insert([
+                    {
+                        name: values.name,
+                        email: values.email,
+                        subject: values.subject,
+                        message: values.message,
+                    },
+                ]);
+
+            if (error) {
+                console.error("Supabase error:", error);
+                throw error;
+            }
+
+            toast.success("Message envoyé !", {
+                description: "Nous vous recontacterons dans les plus brefs délais.",
+            });
+            form.reset();
+        } catch (error) {
+            console.error("Submission error:", error);
+            toast.error("Erreur lors de l'envoi", {
+                description: "Veuillez réessayer plus tard.",
+            });
+        }
     }
 
     return (
