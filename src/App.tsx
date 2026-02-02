@@ -9,6 +9,8 @@ import NousContacter from "./pages/NousContacter";
 import NotFound from "./pages/NotFound";
 
 import AdminMessages from "./pages/AdminMessages";
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,8 @@ const App = () => (
           <Route path="/le-cabinet" element={<LeCabinet />} />
           <Route path="/nous-contacter" element={<NousContacter />} />
           <Route path="/admin/messages" element={<AdminMessages />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
