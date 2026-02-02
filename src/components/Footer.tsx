@@ -33,7 +33,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 pt-6 text-center text-xs text-primary-foreground/50">
-          © {new Date().getFullYear()} Boscary Patrimoine. Tous droits réservés.
+          <a href="/admin/messages" className="hover:text-primary-foreground/60 transition-colors">©</a> {new Date().getFullYear()} Boscary Patrimoine. Tous droits réservés.
         </div>
       </div>
     </footer>
