@@ -29,7 +29,7 @@ const MentionsLegales = () => {
                     <section>
                         <h2 className="text-2xl font-heading text-gold mb-4">2. Statut réglementé</h2>
                         <p>
-                            Boscary Patrimoine Conseiller est immatriculé à l’ORIAS sous le numéro [Numéro ORIAS] (consultable sur <a href="https://www.orias.fr" target="_blank" rel="noopener noreferrer" className="text-gold underline hover:text-white transition-colors">www.orias.fr</a>) en qualité de :
+                            Boscary Patrimoine Conseiller exerce en qualité de :
                         </p>
                         <ul className="list-disc pl-5 mt-2 space-y-1">
                             <li>Conseiller en Investissements Financiers (CIF), membre de l'association agréée par l'AMF : [Nom de l'association, ex: ANACOFI-CIF].</li>

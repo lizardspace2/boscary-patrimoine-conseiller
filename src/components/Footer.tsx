@@ -27,7 +27,6 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-primary-foreground/70">
               <li><a href="/mentions-legales" className="hover:text-gold transition-colors">Mentions légales</a></li>
               <li><a href="/politique-confidentialite" className="hover:text-gold transition-colors">Politique de confidentialité</a></li>
-              <li>ORIAS: 12345678 (Exemple)</li>
             </ul>
           </div>
         </div>
